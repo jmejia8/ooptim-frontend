@@ -14,6 +14,9 @@ import { VenueComponent } from './components/venue/venue.component';
 import { CommiteeComponent } from './components/commitee/commitee.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EventComponent } from './components/event/event.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { CommitteeComponent } from './components/committee/committee.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,9 @@ import { EventComponent } from './components/event/event.component';
     CommiteeComponent,
     FooterComponent,
     EventComponent,
+    TimelineComponent,
+    NavigationComponent,
+    CommitteeComponent,
   ],
   imports: [
     HttpClientModule,
