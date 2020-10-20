@@ -7,11 +7,11 @@ import { EventModel } from '../models/Event'
 })
 export class EventService {
 
-  URL_API = 'http://localhost:1337/events/1'
+  URL_API = 'http://localhost:1337'
   public event: EventModel;
   constructor(private http : HttpClient) { }
 
-  getEvent(){
-    return this.http.get<EventModel>(this.URL_API);
+  getEvent(slug: string){
+    return this.http.get<EventModel>(this.URL_API + '/events?slug=' + slug);
   }
 }

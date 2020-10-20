@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -17,6 +19,12 @@ import { EventComponent } from './components/event/event.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CommitteeComponent } from './components/committee/committee.component';
+
+const routes: Routes = [
+  { path: 'event', component: EventComponent },
+  { path: ':slug', component: EventComponent },
+  { path: '', redirectTo: '/event', pathMatch: 'full' },
+]
 
 @NgModule({
   declarations: [
@@ -39,9 +47,9 @@ import { CommitteeComponent } from './components/committee/committee.component';
     HttpClientModule,
     BrowserModule,
     MarkdownModule.forRoot(),
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [{provide: APP_BASE_HREF, useValue: '/'}],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }
