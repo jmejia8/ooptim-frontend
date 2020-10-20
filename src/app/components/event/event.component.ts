@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../../services/event.service'
 import { EventModel } from '../../models/Event'
+import { DateEvent } from '../../models/DateEvent'
 
 @Component({
   selector: 'app-event',
@@ -22,6 +23,8 @@ export class EventComponent implements OnInit {
       res => {
         // this.eventService.event = res;
         this.event = <EventModel>res;
+        //this.event.dates = res["dates"].map( d => <DateEvent>d );
+        console.log(this.event)
       },
       err => console.log(err)
     )

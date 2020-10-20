@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {EventModel} from '../../models/Event'
+import {DateEvent} from '../../models/DateEvent'
 
 @Component({
   selector: 'app-timeline',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
+  @Input() event: EventModel;
+  @Input() dates: DateEvent[];
   constructor() { }
 
   ngOnInit(): void {
+    console.log("asfd fdsa", event)
   }
+  ngAfterContentInit() : void {
 
+  }
 }

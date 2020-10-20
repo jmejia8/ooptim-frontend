@@ -1,15 +1,21 @@
 <div class="container mt-5">
   <h1 class="text-center pb-5 featurette-heading">Committee Members</h1>
   <div class="row mb-2">
-    <div class="col-md-4">
-      <div class="card profile-card-1">
-        <img src="https://www.uv.mx/personal/emezura/files/2019/07/foto-horizontal-EMezura.png" alt="profile-sample1" class="background"/>
-        <img src="https://www.uv.mx/personal/emezura/files/2019/07/foto-horizontal-EMezura.png" alt="profile-image" class="profile"/>
-        <div class="card-content">
-          <h2>Jesus Adolfo Mejia de Dios<small>jesusmejded@gmail.com</small></h2>
-          <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"> <i class="fa fa-twitter"></i></a><a href="#"> <i class="fa fa-google-plus"></i></a></div>
+
+    <div class="col-md-4 mx-auto" *ngFor="let user of event.committees">
+      <div class="card profile-card-1 shadow">
+        <img src="{{user.photo}}" alt="profile-sample1" class="background-light"/>
+        <img src="{{user.photo}}" alt="profile-image" class="profile"/>
+        <div class="card-content text-dark">
+          <h2>{{user.firstname + ' ' + user.lastname}}</h2>
+          <p>{{user.email}}</p>
+          <p><b>{{user.institution}}</b></p>
         </div>
       </div>
     </div>
+
+ 
+
+
   </div>
 </div>
