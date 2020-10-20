@@ -274,7 +274,7 @@
 
 .sponsor-img-container img{
   max-height:100px;
-  filter: grayscale(100%);
+  filter: grayscale(80%);
 }
 
 

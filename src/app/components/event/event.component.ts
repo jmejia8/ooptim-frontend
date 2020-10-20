@@ -22,6 +22,7 @@ export class EventComponent implements OnInit {
     this.eventService.getEvent().subscribe(
       res => {
         // this.eventService.event = res;
+        Object.keys(res).forEach((key) => (res[key] == null) &&  (res[key] = {}));
         this.event = <EventModel>res;
         //this.event.dates = res["dates"].map( d => <DateEvent>d );
         console.log(this.event)

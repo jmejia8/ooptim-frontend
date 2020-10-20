@@ -5,7 +5,8 @@
       <div class="col-md-7 lead">
         <h2 class="featurette-heading mb-5">Description</h2>
         <div>
-          {{event.description}}
+
+          <markdown [data]="event.description" ></markdown>
         </div>
       </div>
         <div class="col-md-5" >

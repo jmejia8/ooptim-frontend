@@ -20,7 +20,7 @@ export class EventModel {
   sponsors: Sponsor[];
   committees: User[];
   dates: DateEvent[];
-  submission_detail: SubmissionDetail ;
+  submission_detail: SubmissionDetail = new SubmissionDetail();
 
   constructor(){
     this.title = "";

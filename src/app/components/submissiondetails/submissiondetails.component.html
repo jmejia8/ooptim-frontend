@@ -1,4 +1,4 @@
-<div class="information p-5 bg-dark text-white">
+<div class="information p-5 bg-dark text-white" *ngIf="(event?.submission_detail | json) != ({} | json)">
   <div class="container">
     <div class="row">
 
@@ -6,12 +6,14 @@
         <h2 class="featurette-heading mb-3">
           {{event.submission_detail.title}}
         </h2>
-        <p>
-          {{event.submission_detail.description}}
-        </p>
+
+          <markdown [data]="event.submission_detail.description" ></markdown>
       </div>
       <div class="col-sm-4 text-center  ">
-        <a href="{{event.submission_detail.btn_link}}" target="_blank" class="btn btn-outline-secondary btn-lg align-middle">{{event.submission_detail.btn_text}}</a>
+        <div class="d-flex h-100">
+          
+          <a href="{{event.submission_detail.btn_link}}" target="_blank" class="btn btn-outline-secondary btn-lg align-self-center ">{{event.submission_detail.btn_text}}</a>
+        </div>
       </div>
     </div>
   </div>

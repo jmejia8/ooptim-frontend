@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
@@ -37,7 +37,8 @@ import { CommitteeComponent } from './components/committee/committee.component';
   ],
   imports: [
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
