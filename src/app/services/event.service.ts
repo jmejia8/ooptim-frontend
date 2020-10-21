@@ -7,7 +7,7 @@ import { EventModel } from '../models/Event'
 })
 export class EventService {
 
-  URL_API = 'https://ooptim.herokuapp.com'
+  URL_API = 'http://localhost:1337'
   public event: EventModel;
   constructor(private http : HttpClient) { }
 

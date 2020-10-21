@@ -12,9 +12,10 @@
           <p>{{user.email}}</p>
           <p><b>{{user.institution}}</b></p>
           <div class="icon-block">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"> <i class="fa fa-twitter"></i></a>
-            <a href="#"> <i class="fa fa-google-plus"></i></a>
+            <a *ngIf="user.website" href="{{user.website}}"   target="_blank"> <i class="fa fa-globe"></i></a>
+            <a *ngIf="user.linkedin" href="{{user.linkedin}}" target="_blank"> <i class="fa fa-linkedin"></i></a>
+            <a *ngIf="user.twitter" href="{{user.twitter}}"   target="_blank"> <i class="fa fa-twitter"></i></a>
+            <a *ngIf="user.facebook" href="{{user.facebook}}" target="_blank">_<i class="fa fa-facebook"></i></a>
           </div>
         </div>
       </div>

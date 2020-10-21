@@ -18,7 +18,6 @@ export class EventComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-        console.log("slug ", params.get('slug'));
         this.slug = params.get('slug');
     });
 
@@ -35,10 +34,9 @@ export class EventComponent implements OnInit {
     this.eventService.getEvent(this.slug).subscribe(
       res_arr => {
         // this.eventService.event = res;
-        console.log("res", res_arr)
         if( !Array.isArray(res_arr) || res_arr.length == 0){
-          console.log("no event", res_arr)
           this.router.navigate(['/home']);
+          this.titleService.setTitle("Event not found - Opptim");
           return;
         }
         
@@ -46,13 +44,11 @@ export class EventComponent implements OnInit {
         Object.keys(res).forEach((key) => (res[key] == null) &&  (res[key] = {}));
         this.event = <EventModel>res;
         //this.event.dates = res["dates"].map( d => <DateEvent>d );
-        console.log(this.event)
         this.titleService.setTitle(this.event.title + " - Ooptim");
       },
       err => {
-        console.log(err)
         this.router.navigate(['/home']);
-        this.titleService.setTitle("Event not found - Optim");
+        this.titleService.setTitle("Server error - Ooptim");
         
       }
 
