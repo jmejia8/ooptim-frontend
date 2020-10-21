@@ -19,11 +19,12 @@ import { EventComponent } from './components/event/event.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CommitteeComponent } from './components/committee/committee.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: 'event', component: EventComponent },
+  { path: 'home', component: HomeComponent },
   { path: ':slug', component: EventComponent },
-  { path: '', redirectTo: '/event', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 ]
 
 @NgModule({
@@ -42,6 +43,7 @@ const routes: Routes = [
     TimelineComponent,
     NavigationComponent,
     CommitteeComponent,
+    HomeComponent,
   ],
   imports: [
     HttpClientModule,

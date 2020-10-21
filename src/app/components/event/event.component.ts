@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from '../../services/event.service'
 import { EventModel } from '../../models/Event'
 import { DateEvent } from '../../models/DateEvent'
@@ -13,7 +13,7 @@ export class EventComponent implements OnInit {
 
   event : EventModel = new EventModel();
   slug: string;
-  constructor(public eventService : EventService, private route: ActivatedRoute) { }
+  constructor(public eventService : EventService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -24,20 +24,35 @@ export class EventComponent implements OnInit {
     if(this.slug){
       this.getEvent()
 
+    }else{
+      this.router.navigate(['/home'])
     }
     //this.getEvent()
   }
 
   getEvent(){
     this.eventService.getEvent(this.slug).subscribe(
-      res => {
+      res_arr => {
         // this.eventService.event = res;
+        console.log("res", res_arr)
+        if( !Array.isArray(res_arr) || res_arr.length == 0){
+          console.log("no event", res_arr)
+          this.router.navigate(['/home']);
+          return;
+        }
+        
+        let res = res_arr[0]
         Object.keys(res).forEach((key) => (res[key] == null) &&  (res[key] = {}));
-        this.event = <EventModel>res[0];
+        this.event = <EventModel>res;
         //this.event.dates = res["dates"].map( d => <DateEvent>d );
         console.log(this.event)
       },
-      err => console.log(err)
+      err => {
+        console.log(err)
+        this.router.navigate(['/home']);
+        
+      }
+
     )
 
   }
