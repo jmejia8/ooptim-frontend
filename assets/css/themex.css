@@ -1,0 +1,50 @@
+/* CSS HEX */
+--mauve-taupe: #8E5762ff;
+--cadmium-orange: #E0873Fff;
+--artichoke: #83997Dff;
+--rifle-green: #434A3Aff;
+--queen-blue: #3C6EA9ff;
+--oxford-blue: #03072Eff;
+
+/* CSS HSL */
+--mauve-taupe: hsla(348, 24%, 45%, 1);
+--cadmium-orange: hsla(27, 72%, 56%, 1);
+--artichoke: hsla(107, 12%, 55%, 1);
+--rifle-green: hsla(86, 12%, 26%, 1);
+--queen-blue: hsla(212, 48%, 45%, 1);
+--oxford-blue: hsla(234, 88%, 10%, 1);
+
+/* SCSS HEX */
+$mauve-taupe: #8E5762ff;
+$cadmium-orange: #E0873Fff;
+$artichoke: #83997Dff;
+$rifle-green: #434A3Aff;
+$queen-blue: #3C6EA9ff;
+$oxford-blue: #03072Eff;
+
+/* SCSS HSL */
+$mauve-taupe: hsla(348, 24%, 45%, 1);
+$cadmium-orange: hsla(27, 72%, 56%, 1);
+$artichoke: hsla(107, 12%, 55%, 1);
+$rifle-green: hsla(86, 12%, 26%, 1);
+$queen-blue: hsla(212, 48%, 45%, 1);
+$oxford-blue: hsla(234, 88%, 10%, 1);
+
+/* SCSS RGB */
+$mauve-taupe: rgba(142, 87, 98, 1);
+$cadmium-orange: rgba(224, 135, 63, 1);
+$artichoke: rgba(131, 153, 125, 1);
+$rifle-green: rgba(67, 74, 58, 1);
+$queen-blue: rgba(60, 110, 169, 1);
+$oxford-blue: rgba(3, 7, 46, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-right: linear-gradient(90deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-bottom: linear-gradient(180deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-left: linear-gradient(270deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-top-right: linear-gradient(45deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-bottom-right: linear-gradient(135deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-top-left: linear-gradient(225deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-bottom-left: linear-gradient(315deg, #8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
+$gradient-radial: radial-gradient(#8E5762ff, #E0873Fff, #83997Dff, #434A3Aff, #3C6EA9ff, #03072Eff);
