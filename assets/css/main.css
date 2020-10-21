@@ -69,8 +69,8 @@
   width:100%;
   vertical-align: top;
   opacity: 0.9;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(5px) saturate(50%);
+  filter: blur(5px) saturate(150%);
    -webkit-transform: scale(1.8);
   transform: scale(2.8);
 }
@@ -81,8 +81,8 @@
   width:100%;
   vertical-align: top;
   opacity: 0.2;
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
+  -webkit-filter: blur(5px) grayscale(80%);
+  filter: blur(5px) grayscale(80%);
    -webkit-transform: scale(1.8);
   transform: scale(2.8);
 }
