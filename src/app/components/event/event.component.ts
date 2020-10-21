@@ -4,6 +4,7 @@ import {Title} from "@angular/platform-browser";
 import { EventService } from '../../services/event.service'
 import { EventModel } from '../../models/Event'
 import { DateEvent } from '../../models/DateEvent'
+import { ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-event',
