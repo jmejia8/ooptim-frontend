@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 import {EventModel} from '../../models/Event'
 
 @Component({
@@ -8,9 +9,13 @@ import {EventModel} from '../../models/Event'
 })
 export class BannerComponent implements OnInit {
   @Input() event: EventModel;
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) { }
 
   ngOnInit(): void {
+  }
+
+  public onClick(elementId: string): void { 
+      this.viewportScroller.scrollToAnchor(elementId);
   }
 
 }

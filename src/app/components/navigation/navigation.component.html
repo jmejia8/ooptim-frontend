@@ -1,3 +1,40 @@
-<nav class="navbar navbar-expand-lg justify-content-center shadow-md navbar-light bg-dark text-light shadow">
-  <a class="navbar-brand font-weight-bold diplay-4 text-light" href="/">{{event.acronym}}</a>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top" >
+  <a class="navbar-brand  " href="/">{{event.acronym}}</a>
+
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+     
+
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)"  (click)="onClick('description')">Details</a>
+      </li>
+      
+
+      <li class="nav-item" *ngIf="event.dates?.length > 0">
+        <a class="nav-link" href="javascript:void(0)" (click)="onClick('dates')">Important Dates</a>
+      </li>
+     
+      <li class="nav-item" *ngIf="(event?.submission_detail | json) != ({} | json)" >
+        <a class="nav-link" href="javascript:void(0)" (click)="onClick('submission_detail')" >{{event.submission_detail.title}}</a>
+      </li>
+
+   
+      <li class="nav-item" *ngIf="event?.organizers.length > 0">
+        <a class="nav-link" href="javascript:void(0)" (click)="onClick('organizers')" >Organizers</a>
+      </li>
+ 
+      <li class="nav-item" *ngIf="event?.committees.length > 0">
+        <a class="nav-link" href="javascript:void(0)" (click)="onClick('organizers')" >Committee</a>
+      </li>
+
+      
+
+
+    </ul>
+  </div>
 </nav>
