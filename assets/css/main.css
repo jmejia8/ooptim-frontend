@@ -2,6 +2,23 @@ html{
   scroll-behavior:smooth;
 }
 
+#description ul {
+  list-style: none;
+  padding: 0;
+  margin-left:10px;
+}
+#description li {
+  padding-left: 1.3em;
+}
+#description li:before {
+  content: "\f046"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+  color:var(--green);
+}
+
 /*
  * lg banner
  *
@@ -9,7 +26,7 @@ html{
 
 
 .lg-banner{
-  background:url(../img/banner.jpg) no-repeat fixed;
+  background: var(--light);
   background-size: auto;
   background-size: 100%;
 }
