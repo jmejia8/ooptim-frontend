@@ -1,7 +1,6 @@
-<div class="vh-100 d-flex position-relative overflow-hidden pd-5 text-center  lg-banner" id="banner">
+<div class="vh-100 d-flex position-relative overflow-hidden pd-5 text-center  " [ngStyle]="{'background': 'url('+event.banner+') no-repeat fixed', 'background-sizei': 'auto', 'background-size': '100%'}" id="banner">
   <div class="mx-auto mt-5 align-self-center">
     <div class="lg-banner-contaner bg-muted shadow-md p-5">
-
       <h2 class="display-4 text-dark font-weight-bold">{{event.title}}</h2>
       <h3 class="h2  font-weight-bold">{{event.subtitle}}</h3>
       <a class="btn btn-info btn-lg mt-3" (click)="onClick('description')" ><i class="fa fa-arrow-right"></i> Description </a>
