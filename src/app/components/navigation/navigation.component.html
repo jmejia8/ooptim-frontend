@@ -1,5 +1,7 @@
-<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top" >
-  <a class="navbar-brand  " href="/">{{event.acronym}}</a>
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top"  id="main-nav" >
+  <div class="container">
+    
+  <a class="navbar-brand  " href="javascript:void(0)"  (click)="onClick('banner')">{{event.acronym}}</a>
 
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
@@ -36,5 +38,7 @@
 
 
     </ul>
+  </div>
+
   </div>
 </nav>

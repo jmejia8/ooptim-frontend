@@ -1,7 +1,7 @@
 <div class="bg-light mb-5 mt-5  pt-5">
 
   <div class="container text-center sponsor-img-container">
-    <a *ngFor="let item of event.sponsors" class="di-block m-2" href="{{item.url}}" >
+    <a *ngFor="let item of event.sponsors" class="di-block m-2" target="_blank" href="{{item.url}}" >
       <img src="{{item.img_url}}" class="rounded" alt="{{item.name + '+' +item.description}}" />
     </a>
 
