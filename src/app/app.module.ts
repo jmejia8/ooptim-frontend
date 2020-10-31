@@ -20,6 +20,7 @@ import { TimelineComponent } from './components/timeline/timeline.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CommitteeComponent } from './components/committee/committee.component';
 import { HomeComponent } from './components/home/home.component';
+import { SpinnerComponentComponent } from './components/spinner-component/spinner-component.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -45,6 +46,7 @@ const routes: Routes = [
     NavigationComponent,
     CommitteeComponent,
     HomeComponent,
+    SpinnerComponentComponent,
   ],
   imports: [
     HttpClientModule,

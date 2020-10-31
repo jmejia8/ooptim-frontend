@@ -1,11 +1,20 @@
+<div *ngIf="ishttpLoaded">
 
-<app-navigation [event] = "event"></app-navigation>
-<app-banner [event] = "event"></app-banner>
-<app-timeline [event] = "event" [dates] = "event.dates"></app-timeline>
-<app-description [event] = "event"></app-description>
-<app-submissiondetails [event] = "event"></app-submissiondetails>
-<app-organizers [event] = "event"></app-organizers>
-<app-committee [event] = "event"></app-committee>
-<app-sponsors [event] = "event"></app-sponsors>
-<app-footer [event] = "event"></app-footer>
+   <app-navigation [event] = "event"></app-navigation>
+   <app-banner [event] = "event"></app-banner>
+   <app-timeline [event] = "event" [dates] = "event.dates"></app-timeline>
+   <app-description [event] = "event"></app-description>
+   <app-submissiondetails [event] = "event"></app-submissiondetails>
+   <app-organizers [event] = "event"></app-organizers>
+   <app-committee [event] = "event"></app-committee>
+   <app-sponsors [event] = "event"></app-sponsors>
+   <app-footer [event] = "event"></app-footer>
 
+</div>
+<div *ngIf="!ishttpLoaded">
+   <div class="col-md-6 text-center  d-flex">
+      <h2 class="mx-auto my-auto" src="//placehold.it/100">  
+      loading...
+      </h2>
+   </div> 
+</div>

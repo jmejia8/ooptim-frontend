@@ -16,6 +16,7 @@ export class EventComponent implements OnInit {
   event : EventModel = new EventModel();
   slug: string;
   constructor(public eventService : EventService, private route: ActivatedRoute, private router: Router,private titleService:Title) { }
+  ishttpLoaded:boolean=false;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -27,6 +28,7 @@ export class EventComponent implements OnInit {
 
     }else{
       this.router.navigate(['/home'])
+      this.ishttpLoaded = true;
     }
     //this.getEvent()
   }
@@ -46,11 +48,13 @@ export class EventComponent implements OnInit {
         this.event = <EventModel>res;
         //this.event.dates = res["dates"].map( d => <DateEvent>d );
         this.titleService.setTitle(this.event.title + " - Ooptim");
+        this.ishttpLoaded = true;
       },
       err => {
         this.router.navigate(['/home']);
         this.titleService.setTitle("Server error - Ooptim");
         
+        this.ishttpLoaded = true;
       }
 
     )
