@@ -48,7 +48,7 @@ export class EventComponent implements OnInit {
         this.event = <EventModel>res;
         //this.event.dates = res["dates"].map( d => <DateEvent>d );
         this.titleService.setTitle(this.event.title + " - Ooptim");
-        this.ishttpLoaded = false;
+        this.ishttpLoaded = true;
       },
       err => {
         this.router.navigate(['/home']);
